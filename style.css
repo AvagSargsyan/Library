@@ -4,8 +4,14 @@
     margin: 0;
 }
 
+:root {
+    --main-font-color: rgb(182, 92, 18);
+    --main-bc-color: rgb(248, 238, 230);
+    --bc-color: rgb(196, 194, 193);
+}
+
 body {
-    background-color: #eee;
+    background-color: var(--main-bc-color);
     height: 100vh;
     width: 100vw;
 }
@@ -23,6 +29,7 @@ body {
 
 /* header-start */
 .header {
+    background-color: var(--bc-color);
     grid-area: header;
     text-align: center;
     display: flex;
@@ -42,12 +49,82 @@ body {
 }
 
 .header span {
-    color: #555;
+    color: var(--main-font-color);
 }
 /* header-end */
+
+/* sidebar-start */
 .sidebar {
     grid-area: sidebar;
+    background-color: var(--bc-color);
+    padding: 1rem;
 }
+
+.sidebar form {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2rem;
+}
+
+.sidebar form > div {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: .1rem;
+}
+
+.sidebar form > div > label {
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    color: rgb(37, 37, 37);
+}
+
+.sidebar form > div > input {
+    display: block;
+    height: 1.8rem;
+    border: 1px solid silver;
+    border-radius: 4px;
+    padding: 0.1rem;
+    font-size: 1.2rem;
+}
+
+.sidebar form > div > input:focus {
+    background-color: var(--main-bc-color);
+    outline: none !important;
+    border: 1px solid gray;
+}
+
+.sidebar form p {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.sidebar form .read-row {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sidebar form > div > input[type="checkbox"] {
+    display: inline;
+    width: 1.2rem;
+}
+
+.sidebar form button {
+    color: white;
+    font-size: 1.2rem;
+    padding: .4em 1.4em;
+    align-self: flex-start;
+    background-color: var(--main-font-color);
+    border: none;
+    border-radius: 3px;
+}
+
+.sidebar form button:hover {
+    background-color: rgb(145, 67, 4);
+}
+/* sidebar-end */
 
 .main {
     grid-area: main;

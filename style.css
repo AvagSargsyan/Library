@@ -14,7 +14,7 @@ body {
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template: 2fr 10fr 1fr / 2fr 3fr;
+    grid-template: 2fr 12fr 1fr / 2fr 5fr;
     grid-template-areas: 
     "header header"
     "sidebar main"
@@ -23,7 +23,6 @@ body {
 
 /* header-start */
 .header {
-    /* width: 100%; */
     grid-area: header;
     text-align: center;
     display: flex;
@@ -32,7 +31,19 @@ body {
     gap: 1rem;
 }
 
+.header .logo {
+    height: 3rem;
+    height: 3rem;
+}
 
+.header .title {
+    font-size: 3rem;
+    letter-spacing: .1rem;
+}
+
+.header span {
+    color: #555;
+}
 /* header-end */
 .sidebar {
     grid-area: sidebar;

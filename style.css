@@ -152,6 +152,32 @@ body {
     padding: 1rem;
     font-size: 1.1rem;
 }
+
+.remove-btn {
+    color: white;
+    font-size: 1.1rem;
+    padding: .4em 1.2em;
+    background-color: var(--main-font-color);
+    border: none;
+    border-radius: 3px;
+}
+
+.remove-btn:hover {
+    background-color: rgb(145, 67, 4);
+}
+
+.status-btn {
+    color: white;
+    font-size: 1.1rem;
+    padding: .4em 1.2em;
+    background-color: var(--main-font-color);
+    border: none;
+    border-radius: 3px;
+}
+
+.status-btn:hover {
+    background-color: rgb(145, 67, 4);
+}
 /* main-end */
 
 /* footer-start */

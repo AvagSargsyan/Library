@@ -9,6 +9,8 @@ const titleLabel = document.querySelector('[for="title"]');
 
 let myLibrary = [];
 
+// Create a Book using a Book constructor
+/*
 function Book(title, author, pages, read) {
     this.title = title;
     this.author = author;
@@ -20,6 +22,22 @@ function Book(title, author, pages, read) {
 Book.prototype.info = function () {
     return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read ? 'read' : 'not read yet'}`;
 };
+*/
+
+// Create a Book using ES6 class syntax
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+        this.isDisplayed = false;
+    }
+
+    info() {
+        return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read ? 'read' : 'not read yet'}`
+    }
+}
 
 function addBookToLibrary(title, author, pages, read) {
     myLibrary.push(new Book(title, author, pages, read));
